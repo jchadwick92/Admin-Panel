@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  <h1><i class="fa fa-cogs" aria-hidden="true"></i> Admin Panel</h1>
+  <p>This is a very simple admin panel to manage the users of the platform</p>
+  <% if current_user %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg" %>
+  <% else %>
+    <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to "Sign_up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+  <% end %>
+</div>
